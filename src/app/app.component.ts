@@ -5,7 +5,7 @@ import { HttpCacheComponent } from './http-cache/http-cache.component';
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [ HttpCacheComponent, RouterOutlet, RouterLink, RouterLinkActive],
+    imports: [RouterOutlet, RouterLink, RouterLinkActive],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
