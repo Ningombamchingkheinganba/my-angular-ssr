@@ -1,0 +1,54 @@
+<div class="page-container">
+    <div class="login-card">
+      <div class="login-left">
+        <h1 class="brand-title">Our Company</h1>
+        <p class="brand-subtitle">Join us. Create your account.</p>
+      </div>
+      <div class="login-right">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="login-form">
+          <h2 class="form-title">Register</h2>
+  
+          <div class="form-group">
+            <label>Full Name :</label>
+            <div class="email-content">
+              <input type="text" formControlName="fullName" />
+              <mat-icon>person</mat-icon>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label>Phone Number :</label>
+            <div class="email-content">
+              <input type="tel" formControlName="phone" />
+              <mat-icon>call</mat-icon>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label>Email :</label>
+            <div class="email-content">
+              <input type="email" formControlName="email" />
+              <mat-icon>mail</mat-icon>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label>Password :</label>
+            <div class="password-content">
+              <input type="password" formControlName="password" />
+              <mat-icon>lock</mat-icon>
+            </div>
+          </div>
+  
+          <button type="submit" [disabled]="registerForm.invalid" class="submit-btn">
+            Register
+          </button>
+  
+          <div class="form-footer">
+            <a [routerLink]="['/login']">Already have an account? Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

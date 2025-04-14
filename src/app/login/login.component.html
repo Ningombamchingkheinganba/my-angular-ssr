@@ -1,0 +1,63 @@
+<div class="page-container">
+  <div class="login-card">
+    <div class="login-left">
+      <h1 class="brand-title">Our Company</h1>
+      <p class="brand-subtitle">Welcome back. Please login to your account.</p>
+    </div>
+    <div class="login-right">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+        <h2 class="form-title">Log In</h2>
+
+        <div class="form-group">
+          <label>Email :</label>
+          <div class="email-content">
+            <input
+              type="email"
+              formControlName="email"
+            />
+            <mat-icon>mail</mat-icon>
+          </div>
+          <div
+            *ngIf="
+              loginForm.get('email')?.invalid && loginForm.get('email')?.touched
+            "
+            class="error"
+          >
+            Please enter a valid email.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Password :</label>
+          <div class="password-content">
+            <input
+              type="password"
+              formControlName="password"
+            />
+            <mat-icon>lock</mat-icon>
+          </div>
+
+          <div
+            *ngIf="
+              loginForm.get('password')?.invalid &&
+              loginForm.get('password')?.touched
+            "
+            class="error"
+          >
+            Password must be at least 6 characters.
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="loginForm.invalid" class="submit-btn">
+          Login
+        </button>
+
+        <div class="form-footer">
+          <a>Forgot password?</a>
+          <span>•</span>
+          <a [routerLink]="['/register']">Create an account </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
