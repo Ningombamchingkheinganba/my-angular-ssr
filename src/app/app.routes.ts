@@ -7,7 +7,7 @@ import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
     {
-        path: "",
+        path: "home",
         component: HomeComponent
     },
     {
@@ -25,5 +25,10 @@ export const routes: Routes = [
     {
         path: "register",
         component: RegisterComponent
-    }
+    },
+    {
+        path: "",
+        redirectTo: "/home",
+        pathMatch: "full",
+    },
 ];
