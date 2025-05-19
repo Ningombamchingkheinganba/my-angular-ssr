@@ -1,0 +1,28 @@
+p{
+    font-size: 30px;
+    color: var(--primary-text-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--primary-text-color);
+}
+
+.widgets {
+    display: flex;
+    gap: 20px;
+}
+
+.widget, .spinner {
+    border: 1px solid var(--primary-text-color);
+    width: 300px;
+    font-size: 30px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}

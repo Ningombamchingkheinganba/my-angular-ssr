@@ -1,0 +1,37 @@
+/* .red {
+    color: red;
+}
+
+.green {
+    color: green;
+} */
+
+/* :host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+app-header {
+  flex-shrink: 0;
+}
+
+router-outlet {
+  flex-grow: 1;
+  display: block;
+}
+
+app-footer {
+  flex-shrink: 0;
+} */
+
+
+main {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+}

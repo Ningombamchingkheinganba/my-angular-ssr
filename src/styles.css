@@ -2,3 +2,35 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* * {
+    font-size: 180px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+body {
+    --primary-bg-color: #549baa;
+    --primary-text-color: black;
+    --main-bg-color: white;
+    &.dark {
+        --primary-bg-color: #222831;
+        --primary-text-color: #FFD369;
+        --main-bg-color: #393E46;
+    }
+}
+
+.mdc-switch__track::after {
+    transform: translateX(-100%);
+    background: var(--primary-text-color) !important;
+}

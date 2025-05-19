@@ -1,0 +1,145 @@
+.text {
+    font-size: 25px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.custom-spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #e0e0e0;
+  border-top: 6px solid yellowgreen; /* Blue spinner arc */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dots-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.dots-loader span {
+  width: 12px;
+  height: 12px;
+  background: #3498db;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.dots-loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dots-loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-15px);
+    opacity: 0.5;
+  }
+}
+
+.ripple-loader {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 40px auto;
+}
+
+.ripple-loader::before,
+.ripple-loader::after {
+  content: "";
+  position: absolute;
+  border: 4px solid #e91e63;
+  border-radius: 50%;
+  animation: ripple 1.2s infinite;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.ripple-loader::after {
+  animation-delay: 0.6s;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.dash-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid transparent;
+  border-top: 4px solid #00bcd4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 40px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cube-spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 50px auto;
+  transform: rotateZ(45deg);
+}
+
+.cube1,
+.cube2 {
+  background-color: #8e44ad;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: cubeMove 1.2s infinite ease-in-out;
+}
+
+.cube2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes cubeMove {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+}

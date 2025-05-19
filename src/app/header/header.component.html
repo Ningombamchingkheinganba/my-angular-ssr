@@ -1,4 +1,4 @@
-<header class="header">
+<!-- <header class="header">
     <div class="logo">My Logo</div>
     <div class="spacer"></div>
     <button mat-icon-button aria-label="Notifications">
@@ -7,4 +7,42 @@
     <button mat-icon-button aria-label="User Profile">
       <mat-icon>account_circle</mat-icon>
     </button>
-  </header>
+  </header> -->
+
+<!-- <mat-toolbar color="primary" class="container">
+  <div class="left">
+    <mat-icon>menu</mat-icon>
+    <ul class='list'>
+      <li routerLink="/">Home</li>
+      <li routerLink="/product">Products</li>
+      <li routerLink="/about">About</li>
+      <li routerLink="/contact">Contact</li>
+      <li routerLink="/offer">Offers</li>
+    </ul>
+  </div>
+
+  <div>
+    <button mat-flat-button (click)="clickAdmin()" color="primary">Admin</button>
+  </div>
+</mat-toolbar> -->
+
+<mat-toolbar color="primary" class="container">
+  <div class="left">
+    <mat-icon class="menu-icon" (click)="toggleMenu()">menu</mat-icon>
+
+    <ul class="list" [class.show]="isMenuOpen">
+      <li routerLink="/" (click)="closeMenu()">Home</li>
+      <li routerLink="/product" (click)="closeMenu()">Products</li>
+      <li routerLink="/about" (click)="closeMenu()">About</li>
+      <li routerLink="/contact" (click)="closeMenu()">Contact</li>
+      <li routerLink="/offer" (click)="closeMenu()">Offers</li>
+    </ul>
+  </div>
+
+  <div class='right'>
+    <mat-slide-toggle labelPosition="before" [(ngModel)]="isDark" (change)="toggleTheme()">
+      <span class='text'>Toggle dark mode</span>
+    </mat-slide-toggle>    
+    <button mat-flat-button (click)="clickAdmin()">Admin</button>
+  </div>
+</mat-toolbar>

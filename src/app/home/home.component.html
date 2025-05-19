@@ -1,1 +1,35 @@
-<p>home works!</p>
+<p>This is home page</p>
+<div class='container'>
+    <div class='widgets'>
+        <div class='widget'>
+            <div class='title'>Schools</div>
+            <div class='value'>{{schoolcn}}</div>
+        </div>
+        <div class='widget'>
+            <div class='title'>Hospitals</div>
+            <div class='value'>{{hospitalcn}}</div>
+        </div>
+        <div class='widget'>
+            <div class='title'>Banks</div>
+            <div class='value'>{{bankcn}}</div>
+        </div>
+    </div>
+    
+    <div class='widgets'>
+        <div class='spinner'>
+            <div class='sk-circle'>
+                <mat-spinner [diameter]="50"></mat-spinner>
+            </div>
+        </div>
+        <div class='spinner'>
+            <div class='sk-circle'>
+                <mat-spinner [diameter]="50"></mat-spinner>
+            </div>
+        </div>
+        <div class='spinner'>
+            <div class='sk-circle'>
+                <mat-spinner [diameter]="50"></mat-spinner>
+            </div>
+        </div>
+    </div>
+</div>
